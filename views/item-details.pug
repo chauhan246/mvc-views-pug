@@ -1,0 +1,14 @@
+extends layout
+
+block layout-content
+
+    div.card-holder
+        h3 #{game.name}
+        p Platform:
+            a(href=`/games?attribute=platform&value=${game.platform}`) #{game.platform}
+        p Genre: #{game.genre}
+        p Publisher: #{game.publisher}
+        p Developer: #{game.developer}
+        p Rating: #{game.rating}
+    h2
+        a(href="/games/all") Games List

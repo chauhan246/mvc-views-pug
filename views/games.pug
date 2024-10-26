@@ -1,0 +1,32 @@
+extends layout
+
+block scripts
+  script(src="/games-list.js" defer)
+
+block layout-content
+  button#new-game-btn Add New Game
+  div#form-popup
+    form#form-container
+      h1 New Game
+      input#id(type="number", placeholder="ID", name="id")
+      input#name(type="text", placeholder="Name", name="name")
+      input#platform(type="text", placeholder="Platform", name="platform")
+      input#genre(type="text", placeholder="Genre", name="genre")
+      input#release_year(type="number" , placeholder="Year", name="release_year")
+      input#publisher(type="text", placeholder="Publisher", name="publisher")
+      input#developer(type="text", placeholder="Developer", name="developer")
+      input#rating(type="text", placeholder="Rating", name="rating")
+      button#save-game(type="submit") Save
+      button#cancel-btn(type="button") Close
+  main.items-container
+    each game in gamesList
+      article.item
+        div.text
+          h3 #{game.id}: #{game.name}
+          p #{game.release_year}
+          p Platform:
+            a(href=`/games?attribute=platform&value=${game.platform}`) #{game.platform}
+          p Genre: #{game.genre}
+          p Publisher: #{game.publisher}
+          a(href=`/games/${game.id}` )
+            button View
