@@ -6,7 +6,7 @@ The Basic REST API using Node + Express JS.
 - Get the project
     - clone
   
-        `git clone https://github.com/uncg-csc372/express-routes.git`
+        `git clone https://github.com/uncg-csc372/mvc-views-pug.git`
     - download zip.
 - Open the project in VSCode.
 - Open a Terminal.
