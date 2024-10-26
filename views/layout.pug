@@ -8,6 +8,15 @@ html(lang='en')
     block scripts
       script(src="/script.js" defer)
   body
+    block nav
+      nav
+        ul
+          li
+            a(href="/games/all") All Games
+          li
+            a(href="#") Second Page
+          li
+            a(href="#") Third Page
     h1 #{title}
     div#root
       block layout-content
