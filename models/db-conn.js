@@ -1,7 +1,7 @@
 "use strict";
 const path = require("path");
 const Database = require("better-sqlite3");
-const db = new Database(path.resolve(__dirname, "demo.db"), { fileMustExist: true });
+const db = new Database(path.resolve(__dirname, "demo.db"));
 
 function all(sql, ...params) {
   return db.prepare(sql).all(params);
