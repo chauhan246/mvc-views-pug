@@ -24,7 +24,7 @@
     function submitForm() {
         let params = new FormData(id("form-container")); // pass in entire form tag
         let jsonBody = JSON.stringify(Object.fromEntries(params)); //make form data json string.
-        fetch("http://localhost:3000/games/new", {
+        fetch("/games/new", {
             method: "POST",
             headers: {
                 Accept: "application/json, text/plain, */*",
